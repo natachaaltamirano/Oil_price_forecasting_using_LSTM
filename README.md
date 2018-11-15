@@ -38,7 +38,7 @@ However, given the time-contraint we are going to focus as a first step to build
 
 ### Data exploration
 
-[NOTEBOOK]()
+[NOTEBOOK](https://github.com/natachaaltamirano/Oil_price_forecasting_using_LSTM/blob/master/1_Data_Exploration.ipynb)
 
 The OPEC data looks like (we have data up to Nov. 8 2018 6 days before the wanted values)
 
@@ -75,7 +75,7 @@ This network will allow us to learn information about different frequencies of o
 
 ### Vanilla model
 
-[NOTEBOOK]()
+[NOTEBOOK](https://github.com/natachaaltamirano/Oil_price_forecasting_using_LSTM/blob/master/2_LSTM_vanilla.ipynb)
 
 In this first step we are using an LSTM with 1 feature (lag 1). We are trying with different amount of hidden neurones fixing the batch size and the regularization
 
@@ -91,7 +91,7 @@ In what follows we will start tuning hyperparameters to try to avoid overfitting
 - Large scale (short frequencies): change the regularization procedure and batch size
 - Short scale (high frequency): change the number of features (add lags) to the model
 
-[NOTEBOOK]()
+[NOTEBOOK](https://github.com/natachaaltamirano/Oil_price_forecasting_using_LSTM/blob/master/3_LSTM_vanilla_hyper_search.ipynb)
 
 We could try doing a grid search of this hyperparameters, however a very simple grid search will involve comparing thousands of LSTM models and its simple computationally very expensive. That is why we have decided changing hyperparameters and comparing to our vanilla model. **This is something that should be included in the next step for the model**
 
@@ -123,9 +123,9 @@ We find that
 
 ### Changing the number of features
 
-[NOTEBOOK1]()
+[NOTEBOOK1](https://github.com/natachaaltamirano/Oil_price_forecasting_using_LSTM/blob/master/4_LSTM_added_features.ipynb)
 
-[NOTEBOOK2]()
+[NOTEBOOK2](https://github.com/natachaaltamirano/Oil_price_forecasting_using_LSTM/blob/master/5_LSTM_added_features_and_hyper_search.ipynb)
 
 Previously we have addressed the large scale overfitting with different hyperparamenters and regularization methods. But we have also mention that we have a short scale overfitting. To address this we are going to add features to our model.
 
